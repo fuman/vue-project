@@ -12,7 +12,32 @@
                 el: '#app',
                 data: {
                     message: 'Hello Vue.js'
-                }
+                },
+                beforeCreate: function(){
+                    console.log("01_beforeCreate")
+                },
+                created: function(){
+                    console.log("02_created")
+                },
+                beforeMount() {
+                    console.log("03_beforeMount")                                      
+                },
+                mounted() {
+                    console.log("04_mounted")
+                    this.message = "Update Hello Vue"
+                },
+                beforeUpdate() {
+                    console.log("05_beforeUpdate")
+                },
+                updated() {
+                    console.log("06.updated")
+                },
+                beforeDestroy() {
+                    console.log("07.beforeDestroy")
+                },
+                destroyed() {
+                    console.log("08.destroyed")
+                },
             });
         </script>
     </body>
